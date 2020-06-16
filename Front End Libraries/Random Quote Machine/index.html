@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" crossorigin="anonymous">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>FCC: Random Quote Machine</title>
+  </head>
+  <body>
+    <div class="container">
+      <wrapper id="quote-box" class="row h-100">
+          <div class="jumbotron my-auto mx-auto">
+            <div id="quotes">
+              <h1 id="text"></h1>
+              <h2 id="author"></h2>
+            </div>
+                       
+            
+            
+  
+            <div id="buttons">
+              <a id="tweet-quote" href="#" target="_blank" class="btn btn-primary"><i id="tweet-img" class="fab fa-twitter"></i></a>
+
+              <button id="new-quote" class="btn btn-danger float-right" type="button" onClick="getQuote();">Next Quote</button>
+            </div>
+          </div>
+        </wrapper>
+      </div>
+
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      <script  src="./script.js"></script>
+
+    </body>
+</html>

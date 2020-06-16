@@ -1,0 +1,31 @@
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+}
+
+/* #buttons {
+    margin:auto;
+    display:block;
+    font-size: 3em;
+}
+#tweet-quote {
+    
+} */
+
+/* .jumbotron {
+    width: 100em;
+} */
+
+#quotes {
+    display: none;
+}
+
+#author {
+    
+    text-align: right;
+}
+
