@@ -4,4 +4,4 @@
 
 ### Random Quote Machine
 
-[Link](front-end-libraries\random-quote-machine\index.html)
+[Link](https://bjm.me.uk/fcc-projects/front-end-libraries/random-quote-machine/)

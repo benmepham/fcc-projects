@@ -7,25 +7,20 @@ html, body {
     height: 100%;
 }
 
-/* #buttons {
-    margin:auto;
-    display:block;
-    font-size: 3em;
-}
-#tweet-quote {
-    
-} */
-
-/* .jumbotron {
-    width: 100em;
-} */
-
-#quotes {
-    display: none;
-}
-
-#author {
-    
+#author {  
     text-align: right;
 }
 
+footer {
+    padding-bottom: 5px;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    
+}
+footer a {
+    color: white;
+}
