@@ -1,93 +1,76 @@
 <!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <meta charset="UTF-8">
-    <title>FCC: Product Landing Page</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-  </head>
-  <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-    <div id="main">
-      <header id="header">
-        <nav id="nav-bar">
-
-          <li id="navli"><a class="nav-link" href="#main">Home</a></li>
-          <li id="navli"><a class="nav-link" href="#main">Download</a></li>
-          <li id="navli"><a class="nav-link" href="#main">Features</a></li>
-          <li id="navli"><a class="nav-link" href="#form">Newsletter</a></li>
-          <li id="navli"><a class="nav-link" href="#footer">Contact</a></li>
-          
-        </nav>
-        <div id="title">
-          <img id="header-img" src="https://i.fiery.me/gPic.png">
-        </div>
-        <div id="right"></div>
-
-      </header>
-      
-
-      <div class="container">
-        
-        <section id="download">
-          
-          <a style="color: rgb(255, 255, 255)" href="#" target='_blank'>
-                <i class="fas fa-download fa-3x"></i>
-          </a>
-        </section>
-        <section id="features">
-          <div id="col">
-            <h2>point1</h2>
-
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Etiam convallis enim eu orci rhoncus molestie.</li>
-              <li>Integer sodales nibh nec risus ultrices viverra.</li>
-            </ul>
-          </div>
-          <div id="col">
-            <h2>point2</h2>
-
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Etiam convallis enim eu orci rhoncus molestie.</li>
-              <li>Integer sodales nibh nec risus ultrices viverra.</li>
-            </ul>
-          </div>
-          <div id="col">
-            <h2>point3</h2>
-
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Etiam convallis enim eu orci rhoncus molestie.</li>
-              <li>Integer sodales nibh nec risus ultrices viverra.</li>
-            </ul>
-          </div>
-        </section>
-        <section id="vid">
-    
-          <iframe id="video" height= "720" src="https://www.youtube-nocookie.com/embed/a2GujJZfXpg?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </section>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-
-          <div id="form">
-            <label for="email" id="email-label">Sign up to our newsletter:</label>
-            <input type="email" id="email" name="email" placeholder="example@example.org" required>
-            <input id="submit" type="submit" value="Sign-up!" class="btn"></input>
-
-          </div>
-
-        </form>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FCC: Product Landing Page</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <div id="main">
+    <header id="header">
+      <nav id="nav-bar">
+        <li id="navli"><a class="nav-link" href="#main">Home</a></li>
+        <li id="navli"><a class="nav-link" href="#main">Download</a></li>
+        <li id="navli"><a class="nav-link" href="#main">Features</a></li>
+        <li id="navli"><a class="nav-link" href="#form">Newsletter</a></li>
+        <li id="navli"><a class="nav-link" href="#footer">Contact</a></li>
+      </nav>
+      <div id="title">
+        <img id="header-img" src="https://i.fiery.me/gPic.png">
       </div>
+      <div id="right"></div>
+    </header>
+    <div class="container">
+      <section id="download">
+        <a style="color: rgb(255, 255, 255)" href="#" target='_blank'>
+          <i class="fas fa-download fa-3x"></i>
+        </a>
+      </section>
+      <section id="features">
+        <div id="col">
+          <h2>point1</h2>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Etiam convallis enim eu orci rhoncus molestie.</li>
+            <li>Integer sodales nibh nec risus ultrices viverra.</li>
+          </ul>
+        </div>
+        <div id="col">
+          <h2>point2</h2>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Etiam convallis enim eu orci rhoncus molestie.</li>
+            <li>Integer sodales nibh nec risus ultrices viverra.</li>
+          </ul>
+        </div>
+        <div id="col">
+          <h2>point3</h2>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Etiam convallis enim eu orci rhoncus molestie.</li>
+            <li>Integer sodales nibh nec risus ultrices viverra.</li>
+          </ul>
+        </div>
+      </section>
+      <section id="vid">
+        <iframe id="video" height="720" src="https://www.youtube-nocookie.com/embed/a2GujJZfXpg?showinfo=0"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </section>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <div id="form">
+          <label for="email" id="email-label">Sign up to our newsletter:</label>
+          <input type="email" id="email" name="email" placeholder="example@example.org" required>
+          <input id="submit" type="submit" value="Sign-up!" class="btn"></input>
+        </div>
+      </form>
     </div>
-    <footer>
-      
-      <p id="footer"><a href="mailto:contact@bjm.me.uk">Contact</a></p>
-      
-      <p id="footer"> - Coded by <a href="https://www.freecodecamp.org/ben-14" target='_blank'>Ben</a> - MMXVIII</p>
-    </footer>
-  </body>
+  </div>
+  <footer>
+    <p id="footer"><a href="mailto:contact@bjm.me.uk">Contact</a></p>
+    <p id="footer"> - Coded by <a href="https://www.freecodecamp.org/ben-14" target='_blank'>Ben</a> - MMXVIII</p>
+  </footer>
+</body>
 </html>
