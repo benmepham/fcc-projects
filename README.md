@@ -14,7 +14,7 @@
 
 ## JavaScript Algorithms and Data Structures
 
-- [All](github.com/benmepham/fcc-projects/javascript-algorithms-data-structures)
+- [All](https://github.com/benmepham/fcc-projects/tree/master/javascript-algorithms-data-structures)
 
 ## Front End Libraries
 
