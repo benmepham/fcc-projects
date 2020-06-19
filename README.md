@@ -1,7 +1,29 @@
-# fcc-projects
+# freeCodeCamp Projects
+
+## Responsive Web Design
+
+- [Tribute Page](https://bjm.me.uk/fcc-projects/responsive-web-design/tribute-page)
+
+- [Survey Form](https://bjm.me.uk/fcc-projects/responsive-web-design/survey-form)
+
+- [Product Landing Page](https://bjm.me.uk/fcc-projects/responsive-web-design/product-landing-page)
+
+- [Technical Documentation Page](https://bjm.me.uk/fcc-projects/responsive-web-design/technical-documentation-page)
+
+- [Personal Portfolio Webpage](https://bjm.me.uk/fcc-projects/responsive-web-design/personal-portfolio-webpage)
+
+## JavaScript Algorithms and Data Structures
 
 ## Front End Libraries
 
-### Random Quote Machine
+- [Random Quote Machine](https://bjm.me.uk/fcc-projects/front-end-libraries/random-quote-machine/)
 
-[Link](https://bjm.me.uk/fcc-projects/front-end-libraries/random-quote-machine/)
+    Built with HTML/CSS/JS/jQuery/Bootstrap as well as [this](https://github.com/skolakoda/programming-quotes-api) API
+- [Markdown Previewer](https://xxx)
+
+
+## Old FCC Projects
+
+- Tribute Page
+
+- Personal Portfolio
