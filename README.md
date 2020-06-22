@@ -21,7 +21,10 @@
 - [Random Quote Machine](https://bjm.me.uk/fcc-projects/front-end-libraries/random-quote-machine/)
 
     Built with HTML/CSS/JS/jQuery/Bootstrap as well as [this](https://github.com/skolakoda/programming-quotes-api) API
-- [Markdown Previewer](https://bjm.me.uk/fcc-projects/front-end-libraries/)
+
+- [Markdown Previewer](https://bjm.me.uk/fcc-projects/front-end-libraries/markdown-previewer)
+
+    Built with HTML/CSS/JS/Bootstrap/React/Marked/DOMPurify
 
 ## Old FCC Projects
 
