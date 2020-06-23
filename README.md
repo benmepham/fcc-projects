@@ -26,6 +26,10 @@
 
     Built with HTML/CSS/JS/Bootstrap/React/Marked/DOMPurify
 
+- [Drum Machine](https://bjm.me.uk/fcc-projects/front-end-libraries/drum-machine)
+
+    Built with HTML/CSS/JS/Bootstrap/React
+
 ## Old FCC Projects
 
 - Tribute Page
