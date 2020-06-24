@@ -1,15 +1,67 @@
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            nums: [
+                {
+                    num: 9,
+                    class: "",
+                },
+                {
+                    num: 8,
+                    class: "",
+                },
+                {
+                    num: 7,
+                    class: "",
+                },
+                {
+                    num: 6,
+                    class: "",
+                },
+                {
+                    num: 5,
+                    class: "",
+                },
+                {
+                    num: 4,
+                    class: "",
+                },
+                {
+                    num: 3,
+                    class: "",
+                },
+                {
+                    num: 2,
+                    class: "",
+                },
+                {
+                    num: 1,
+                    class: "",
+                },
+                {
+                    num: 0,
+                    class: "wide",
+                },
+                {
+                    num: ".",
+                    class: "",
+                },
+            ],
+            modifiers: ["AC"],
+            operators: ["/", "*", "-", "+", "="],
+        };
     }
 
     render() {
         return (
             <div id="calculator">
-                <h1 id="display">Disp</h1>
+                <p id="display">0123</p>
                 <div className="digits flex">
-                    <button>9</button>
+                    {this.state.nums.map((num) => (
+                        <Button text={num.num} classN={num.class} />
+                    ))}
+                    {/* <button>9</button>
                     <button>8</button>
                     <button>7</button>
                     <button>6</button>
@@ -19,12 +71,12 @@ class App extends React.Component {
                     <button>2</button>
                     <button>1</button>
                     <button className="wide">0</button>
-                    <button>.</button>
+                    <button>.</button> */}
                 </div>
                 <div className="modifiers subgrid">
                     <button>AC</button>
-                    <button>AC</button>
-                    <button>AC</button>
+                    {/* <button></button>
+                    <button></button> */}
                 </div>
                 <div className="operations subgrid">
                     <button>/</button>
@@ -38,25 +90,26 @@ class App extends React.Component {
     }
 }
 
-class Display extends React.Component {
+// class Display extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {};
+//     }
+
+//     render() {
+//         return <div id="display"></div>;
+//     }
+// }
+
+class Button extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
 
     render() {
-        return <div id="display"></div>;
-    }
-}
-
-class Buttons extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    render() {
-        return <div id="calculator">Calc</div>;
+        const { text, classN } = this.props;
+        return (<button className={classN}>{text}</button>);
     }
 }
 
