@@ -10,7 +10,7 @@ body {
     max-width: 100%;
 }
 
-textarea, .preview {
+textarea,
+.preview {
     min-height: 400px;
 }
-

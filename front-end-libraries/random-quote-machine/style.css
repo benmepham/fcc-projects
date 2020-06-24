@@ -1,5 +1,5 @@
-
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -7,7 +7,7 @@ html, body {
     height: 100%;
 }
 
-#author {  
+#author {
     text-align: right;
 }
 
@@ -19,7 +19,6 @@ footer {
     width: 100%;
     color: white;
     text-align: center;
-    
 }
 footer a {
     color: white;

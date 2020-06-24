@@ -1,83 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>FCC: Survey Form</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  <h1 id="title">Survey Form</h1>
-  <div id="main">
-    <p id="description">Questions</p>
-    <form id="survey-form" action="">
-      <div id="row">
-        <div id="left">
-          <label for="name" id="name-label">* Name:</label>
+    <head>
+        <meta charset="UTF-8" />
+        <title>FCC: Survey Form</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <h1 id="title">Survey Form</h1>
+        <div id="main">
+            <p id="description">Questions</p>
+            <form id="survey-form" action="">
+                <div id="row">
+                    <div id="left">
+                        <label for="name" id="name-label">* Name:</label>
+                    </div>
+                    <div id="right">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Full Name"
+                            required
+                        />
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="left">
+                        <label for="email" id="email-label">* Email:</label>
+                    </div>
+                    <div id="right">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@example.org"
+                            required
+                        />
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="left">
+                        <label for="age" id="number-label">* Age:</label>
+                    </div>
+                    <div id="right">
+                        <input
+                            type="number"
+                            id="number"
+                            name="age"
+                            placeholder="Age"
+                            required
+                            min="0"
+                            max="150"
+                        />
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="left">
+                        <label for="dropdown" id="dropdown-label"
+                            >* Dropdown:</label
+                        >
+                    </div>
+                    <div id="right">
+                        <select id="dropdown" name="dropdown" class="dropdown">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="left">
+                        <label for="radio" id="radio-label">* Radio:</label>
+                    </div>
+                    <div id="right">
+                        <label
+                            ><input
+                                id="radio1"
+                                type="radio"
+                                name="radio1"
+                                value="1"
+                            />
+                            1</label
+                        >
+                        <label
+                            ><input
+                                id="radio1"
+                                type="radio"
+                                name="radio1"
+                                value="2"
+                            />
+                            2</label
+                        >
+                        <label
+                            ><input
+                                id="radio1"
+                                type="radio"
+                                name="radio1"
+                                value="3"
+                            />
+                            3</label
+                        >
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="left">
+                        <label for="check1" id="checkbox-label"
+                            >* Checkbox:</label
+                        >
+                    </div>
+                    <div id="right">
+                        <label
+                            ><input id="check1" type="checkbox" value="1" />
+                            1</label
+                        >
+                        <label
+                            ><input id="radio1" type="checkbox" value="2" />
+                            2</label
+                        >
+                        <label
+                            ><input id="radio1" type="checkbox" value="3" />
+                            3</label
+                        >
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="left">
+                        <label for="text1" id="text-label">Textbox:</label>
+                    </div>
+                    <div id="right">
+                        <textarea
+                            cols="20"
+                            rows="2"
+                            placeholder="yada yada yada"
+                        ></textarea>
+                    </div>
+                </div>
+                <button id="submit" type="submit">Submit</button>
+            </form>
         </div>
-        <div id="right">
-          <input type="text" id="name" name="name" placeholder="Full Name" required>
-        </div>
-      </div>
-      <div id="row">
-        <div id="left">
-          <label for="email" id="email-label">* Email:</label>
-        </div>
-        <div id="right">
-          <input type="email" id="email" name="email" placeholder="example@example.org" required>
-        </div>
-      </div>
-      <div id="row">
-        <div id="left">
-          <label for="age" id="number-label">* Age:</label>
-        </div>
-        <div id="right">
-          <input type="number" id="number" name="age" placeholder="Age" required min="0" max="150">
-        </div>
-      </div>
-      <div id="row">
-        <div id="left">
-          <label for="dropdown" id="dropdown-label">* Dropdown:</label>
-        </div>
-        <div id="right">
-          <select id="dropdown" name="dropdown" class="dropdown">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-        </div>
-      </div>
-      <div id="row">
-        <div id="left">
-          <label for="radio" id="radio-label">* Radio:</label>
-        </div>
-        <div id="right">
-          <label><input id="radio1" type="radio" name="radio1" value="1"> 1</label>
-          <label><input id="radio1" type="radio" name="radio1" value="2"> 2</label>
-          <label><input id="radio1" type="radio" name="radio1" value="3"> 3</label>
-        </div>
-      </div>
-      <div id="row">
-        <div id="left">
-          <label for="check1" id="checkbox-label">* Checkbox:</label>
-        </div>
-        <div id="right">
-          <label><input id="check1" type="checkbox" value="1"> 1</label>
-          <label><input id="radio1" type="checkbox" value="2"> 2</label>
-          <label><input id="radio1" type="checkbox" value="3"> 3</label>
-        </div>
-      </div>
-      <div id="row">
-        <div id="left">
-          <label for="text1" id="text-label">Textbox:</label>
-        </div>
-        <div id="right">
-          <textarea cols="20" rows="2" placeholder="yada yada yada"></textarea>
-        </div>
-      </div>
-      <button id="submit" type="submit">Submit</button>
-    </form>
-  </div>
-</body>
+    </body>
 </html>

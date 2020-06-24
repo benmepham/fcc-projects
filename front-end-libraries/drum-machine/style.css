@@ -18,7 +18,7 @@ body {
     flex-wrap: wrap;
     padding: 15px;
     width: 400px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 #display h1 {
@@ -29,11 +29,11 @@ body {
     line-height: 1.2;
     font-size: 2.5rem;
     margin: 0.5rem;
-  }
+}
 
 .drum-pad {
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    background-color:  #dc3545;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #dc3545;
     color: white;
     display: flex;
     align-items: center;

@@ -30,7 +30,6 @@
 
     Built with HTML/CSS/JS/React
 
-
 ## Old FCC Projects
 
 - Tribute Page
