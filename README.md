@@ -30,6 +30,10 @@
 
     Built with HTML/CSS/JS/React
 
+- [JavaScript Calculator](https://bjm.me.uk/fcc-projects/front-end-libraries/javascript-calculator)
+
+    Built with HTML/CSS/JS/React
+
 ## Old FCC Projects
 
 - Tribute Page

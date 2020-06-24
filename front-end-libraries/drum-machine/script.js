@@ -61,8 +61,6 @@ class App extends React.Component {
                 },
             ],
         };
-
-        this.setDisplay = this.setDisplay.bind(this);
     }
 
     setDisplay = (text) => this.setState({ display: text });

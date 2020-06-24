@@ -1,0 +1,128 @@
+html, body {
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+#calculator {
+    /* min-height: 100vh; */
+    /* height: 500px; */
+    
+    width: 406px;
+    grid-template-areas: "disp disp disp disp" "modif modif modif oper" "digit digit digit oper" "digit digit digit oper" "digit digit digit oper" "digit digit digit oper";
+    grid-auto-columns: 1fr;
+}
+
+#display {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+    grid-area: disp;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 150px;
+}
+
+.modifiers {
+    grid-area: modif;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+.operations {
+    grid-area: oper;
+}
+
+.digits {
+    grid-area: digit;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+button {
+    font-size: 2rem;
+    border: 1px solid black;
+    height: 100px;
+    
+}
+
+.modifiers button {
+    background-color: #ccc;
+}
+
+.operations button {
+    /* background-color: #F39737; */
+    background-color: orange;
+    color: white;
+}
+
+.digits button {
+    background-color: #424242;
+    flex: 1 0 30%;
+    color: white;
+}
+
+#calculator,
+.subgrid {
+    display: grid;
+}
+
+.digits .wide {
+    flex: 2 0 60%;
+    order: 1;
+}
+
+button:hover {
+    opacity: 0.5;
+  }
+
+/* 
+body {
+    background-color: #7f8c8d;
+    font-family: "Segoe UI", sans-serif;
+    margin: 0px;
+}
+
+html {}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#calculator {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    background-color: black;
+    grid-gap: 10px 10px;
+
+    
+}
+
+.grid-item {
+    background-color: grey;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+} 
+*/
