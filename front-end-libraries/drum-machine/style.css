@@ -1,11 +1,6 @@
-/* * {
-    box-sizing: border-box;
-} */
-
 body {
     background-color: #7f8c8d;
-    /* margin: 0; */
-    /* min-height: 100vh; */
+    font-family: "Segoe UI", sans-serif;
 }
 
 .container {
@@ -18,30 +13,28 @@ body {
 #display {
     background-color: white;
     border-radius: 4px;
+    justify-content: center;
     display: flex;
-    /* Only for h1 */
-    /* align-items: center;
-    justify-content: center; */
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 15px;
     width: 400px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-
 }
 
 #display h1 {
     display: block;
     width: 100%;
     text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2.5rem;
+    margin: 0.5rem;
   }
 
 .drum-pad {
-    /* border: 2px solid #333; */
-    /* border-radius: 4px; */
-    /* background-color: purple; */
-    /* color: #fff; */
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-
+    background-color:  #dc3545;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,11 +42,14 @@ body {
     margin: 10px;
     height: 100px;
     width: 100px;
+    border-radius: 4px;
 }
 
 .drum-pad.active {
- 
     opacity: 0.8;
-    transform: scale(0.95);
+    transform: scale(0.99);
+}
 
+.drum-pad:hover {
+    background-color: #b02a37;
 }
