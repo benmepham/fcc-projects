@@ -1,115 +1,205 @@
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            nums: [
-                {
-                    num: 9,
-                    class: "",
-                },
-                {
-                    num: 8,
-                    class: "",
-                },
-                {
-                    num: 7,
-                    class: "",
-                },
-                {
-                    num: 6,
-                    class: "",
-                },
-                {
-                    num: 5,
-                    class: "",
-                },
-                {
-                    num: 4,
-                    class: "",
-                },
-                {
-                    num: 3,
-                    class: "",
-                },
-                {
-                    num: 2,
-                    class: "",
-                },
-                {
-                    num: 1,
-                    class: "",
-                },
-                {
-                    num: 0,
-                    class: "wide",
-                },
-                {
-                    num: ".",
-                    class: "",
-                },
-            ],
-            modifiers: ["AC"],
-            operators: ["/", "*", "-", "+", "="],
-        };
-    }
+const NUMS = [
+        {
+            num: 9,
+            id: "nine",
+        },
+        {
+            num: 8,
+            id: "eight",
+        },
+        {
+            num: 7,
+            id: "seven",
+        },
+        {
+            num: 6,
+            id: "six",
+        },
+        {
+            num: 5,
+            id: "five",
+        },
+        {
+            num: 4,
+            id: "four",
+        },
+        {
+            num: 3,
+            id: "three",
+        },
+        {
+            num: 2,
+            id: "two",
+        },
+        {
+            num: 1,
 
+            id: "one",
+        },
+        {
+            num: 0,
+            id: "zero",
+        },
+        {
+            num: ".",
+            id: "decimal",
+        },
+    ],
+    OPERATORS = [
+        {
+            op: "/",
+            id: "divide",
+        },
+        {
+            op: "*",
+            id: "multiply",
+        },
+        {
+            op: "+",
+            id: "add",
+        },
+        {
+            op: "-",
+            id: "subtract",
+        },
+        {
+            op: "=",
+            id: "equals",
+        },
+    ];
+
+class ResultComponent extends React.Component {
+    render() {
+        return <div id="display">{this.props.result}</div>;
+    }
+}
+
+class KeyPadComponent extends React.Component {
     render() {
         return (
-            <div id="calculator">
-                <p id="display">0123</p>
-                <div className="digits flex">
-                    {this.state.nums.map((num) => (
-                        <Button text={num.num} classN={num.class} />
-                    ))}
-                    {/* <button>9</button>
-                    <button>8</button>
-                    <button>7</button>
-                    <button>6</button>
-                    <button>5</button>
-                    <button>4</button>
-                    <button>3</button>
-                    <button>2</button>
-                    <button>1</button>
-                    <button className="wide">0</button>
-                    <button>.</button> */}
-                </div>
-                <div className="modifiers subgrid">
-                    <button>AC</button>
-                    {/* <button></button>
-                    <button></button> */}
-                </div>
-                <div className="operations subgrid">
-                    <button>/</button>
-                    <button>*</button>
-                    <button>-</button>
-                    <button>+</button>
-                    <button>=</button>
-                </div>
+            <div className="digits flex">
+                {NUMS.map((item) => (
+                    <button
+                        onClick={(e) => this.props.onClick(item.num)}
+                        id={item.id}
+                    >
+                        {item.num}
+                    </button>
+                ))}
             </div>
         );
     }
 }
 
-// class Display extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {};
-//     }
+class ModifierComponent extends React.Component {
+    render() {
+        return (
+            <div className="modifiers subgrid">
+                <button onClick={(e) => this.props.onClick("AC")} id="clear">
+                    AC
+                </button>
+            </div>
+        );
+    }
+}
 
-//     render() {
-//         return <div id="display"></div>;
-//     }
-// }
+class OperatorComponent extends React.Component {
+    render() {
+        return (
+            <div className="operators subgrid">
+                {OPERATORS.map((item) => (
+                    <button
+                        onClick={(e) => this.props.onClick(item.op)}
+                        id={item.id}
+                    >
+                        {item.op}
+                    </button>
+                ))}
+            </div>
+        );
+    }
+}
 
-class Button extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
+class App extends React.Component {
+    constructor() {
+        super();
+        this.state = { result: "0" };
     }
 
+    onClick = (button) => {
+        if (button === "=") {
+            this.calculate();
+        } else if (button === "AC") {
+            this.reset();
+        } else if (this.state.result.length > 10) {
+            this.maxDigits();
+        }
+        // Prevent mutliple "." in the same part
+        else if (button === ".") {
+            const last = this.state.result.split(/[\+\-\*\/]/).slice(-1)[0];
+            if (!last.includes(".")) {
+                this.setState({
+                    result: this.state.result + ".",
+                });
+            }
+        }
+        // Allow negative operator to come after other operators
+        else if (/[\-]/.test(button) && /[\+\*\/]$/.test(this.state.result)) {
+            console.log("Minus");
+            this.setState({
+                result: this.state.result + button,
+            });
+        }
+        // Allow only one operator
+        else if (
+            /[\+\-\*\/]/.test(button) &&
+            /[\+\-\*\/]+$/.test(this.state.result)
+        ) {
+            this.setState({
+                result: this.state.result.replace(/[\+\-\*\/]+$/, "") + button,
+            });
+        } else {
+            this.setState({
+                result: this.state.result.replace(/^0+/, "") + button,
+            });
+        }
+    };
+
+    calculate = () => {
+        try {
+            this.setState({
+                result: (eval(this.state.result) || "") + "",
+            });
+        } catch (e) {
+            this.setState({
+                result: "error",
+            });
+        }
+    };
+
+    reset = () => {
+        this.setState({
+            result: "0",
+        });
+    };
+
+    maxDigits = () => {
+        const last = this.state.result;
+        this.setState({
+            result: "Digit Limit Met",
+        });
+        setTimeout(() => this.setState({ result: last }), 500);
+    };
+
     render() {
-        const { text, classN } = this.props;
-        return (<button className={classN}>{text}</button>);
+        return (
+            <div id="calculator">
+                <ResultComponent result={this.state.result} />
+                <KeyPadComponent onClick={this.onClick} />
+                <ModifierComponent onClick={this.onClick} />
+                <OperatorComponent onClick={this.onClick} />
+            </div>
+        );
     }
 }
 
