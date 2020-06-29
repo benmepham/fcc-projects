@@ -2,7 +2,6 @@ const sound = document.getElementById("beep");
 
 function Timers(props) {
     const type = props.title.toLowerCase();
-
     return (
         <div id={`${type}`}>
             <h2 id={`${type}-label`}>{props.title} Length</h2>
@@ -47,16 +46,13 @@ class App extends React.Component {
                 isRunning: true,
             });
             this.loop = setInterval(() => {
-                const { clockSeconds } = this.state;
-
+                const { clockSeconds, currentTimer } = this.state;
                 if (clockSeconds === 0) {
                     this.setState({
                         currentTimer:
-                            this.state.currentTimer === "Session"
-                                ? "Break"
-                                : "Session",
+                            currentTimer === "Session" ? "Break" : "Session",
                         clockSeconds:
-                            this.state.currentTimer === "Session"
+                            currentTimer === "Session"
                                 ? this.state.breakLength * 60
                                 : this.state.sessionLength * 60,
                     });
@@ -78,29 +74,25 @@ class App extends React.Component {
             currentTimer: "Session",
             clockSeconds: 25 * 60,
         });
-
         clearInterval(this.loop);
         sound.pause();
         sound.currentTime = 0;
     };
 
     handleLengthChange = (length, timerType) => {
-        let newCount;
-
+        let newLength;
         if (timerType === "break") {
-            newCount = this.state.breakLength + length;
+            newLength = this.state.breakLength + length;
         } else {
-            newCount = this.state.sessionLength + length;
+            newLength = this.state.sessionLength + length;
         }
-
-        if (newCount > 0 && newCount < 61 && !this.state.isRunning) {
+        if (newLength > 0 && newLength < 61 && !this.state.isRunning) {
             this.setState({
-                [`${timerType}Length`]: newCount,
+                [`${timerType}Length`]: newLength,
             });
-
             if (this.state.currentTimer.toLowerCase() === timerType) {
                 this.setState({
-                    clockSeconds: newCount * 60,
+                    clockSeconds: newLength * 60,
                 });
             }
         }
@@ -111,7 +103,6 @@ class App extends React.Component {
         let secs = value % 60;
         mins = mins < 10 ? "0" + mins : mins;
         secs = secs < 10 ? "0" + secs : secs;
-
         return `${mins}:${secs}`;
     };
 
@@ -129,9 +120,9 @@ class App extends React.Component {
             handleDecrease: () => this.handleLengthChange(-1, "session"),
             handleIncrease: () => this.handleLengthChange(1, "session"),
         };
+        
         return (
             <div id="clock">
-                {/* <h1>Pomodoro Clock</h1> */}
                 <Timers {...breakProps} />
                 <Timers {...sessionProps} />
                 <div id="timer">

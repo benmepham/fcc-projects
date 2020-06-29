@@ -1,9 +1,16 @@
-html, body {
-    background-color: #2c3e50;
-    /* margin: 0;
-    padding: 0; */
+html {
+    background: #c31432;
+    background: -webkit-linear-gradient(
+        to right,
+        #c31432,
+        #240b36
+    ); 
+    background: linear-gradient(
+        to right,
+        #c31432,
+        #240b36
+    ); 
     font-family: "Segoe UI";
-    /* font-weight: lighter; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +32,8 @@ html, body {
 }
 #timer {
     width: 32rem;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
 .flex {
@@ -35,12 +44,11 @@ html, body {
 
 button {
     background-color: transparent;
-    /* color: black; */
     color: white;
     font-size: 20px;
-    padding: 10px 15px;
     cursor: pointer;
-    margin: 10px;
+    margin: 20px;
+    border: 0;
 }
 
 .flex p {
@@ -54,12 +62,11 @@ button {
     margin: 10px;
 }
 
-#timer {
-    border: 2px solid white;
-    border-radius: 10px;
-}
-
 #time-left {
     font-size: 50px;
     margin: 10px;
+}
+
+h2 {
+    margin: 0;
 }
