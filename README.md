@@ -36,7 +36,7 @@
 
 - [Pomodoro Clock](https://bjm.me.uk/fcc-projects/front-end-libraries/pomodoro-clock)
 
-    Built with
+    Built with HTML/CSS/JS/React
 
 ## Old FCC Projects
 
