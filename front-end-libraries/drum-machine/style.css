@@ -1,13 +1,10 @@
-body {
-    background-color: #7f8c8d;
+html {
+    background-color: rgba(0, 0, 0, 0.616);
     font-family: "Segoe UI", sans-serif;
-}
-
-.container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    height: 100%;
 }
 
 #display {
@@ -22,10 +19,8 @@ body {
 }
 
 #display h1 {
-    display: block;
     width: 100%;
     text-align: center;
-    font-weight: 500;
     line-height: 1.2;
     font-size: 2.5rem;
     margin: 0.5rem;
@@ -33,7 +28,7 @@ body {
 
 .drum-pad {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    background-color: #dc3545;
+    background-color: rgba(0, 0, 0, 0.74);
     color: white;
     display: flex;
     align-items: center;
@@ -51,5 +46,5 @@ body {
 }
 
 .drum-pad:hover {
-    background-color: #b02a37;
+    opacity: 0.8;
 }
