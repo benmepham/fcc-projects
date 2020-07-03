@@ -28,16 +28,16 @@ class App extends React.Component {
             currentTimer: "Session",
             clockSeconds: 25 * 60,
         };
-        this.loop = undefined;
+        this.timerLoop = undefined;
     }
 
     componentWillUnmount() {
-        clearInterval(this.loop);
+        clearInterval(this.timerLoop);
     }
 
     handlePlayPause = () => {
         if (this.state.isRunning) {
-            clearInterval(this.loop);
+            clearInterval(this.timerLoop);
             this.setState({
                 isRunning: false,
             });
@@ -45,7 +45,7 @@ class App extends React.Component {
             this.setState({
                 isRunning: true,
             });
-            this.loop = setInterval(() => {
+            this.timerLoop = setInterval(() => {
                 const { clockSeconds, currentTimer } = this.state;
                 if (clockSeconds === 0) {
                     this.setState({
@@ -74,7 +74,7 @@ class App extends React.Component {
             currentTimer: "Session",
             clockSeconds: 25 * 60,
         });
-        clearInterval(this.loop);
+        clearInterval(this.timerLoop);
         sound.pause();
         sound.currentTime = 0;
     };
