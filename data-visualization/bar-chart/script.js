@@ -46,21 +46,19 @@ const svg = d3
 d3.json(
     "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json"
 ).then(function (data) {
+    
     const yScale = d3
         .scaleLinear()
         .domain([0, d3.max(data.data, (d) => d[1])])
         .range([height - padding, padding]);
 
     const xYears = data.data.map((item) => new Date(item[0]));
-    // var xMax = new Date();
-    // xMax.setMonth(xMax.getMonth() + 3);
-    // let xMin = ;
-
+    const xMax = new Date(d3.max(xYears));
     const xScale = d3
         .scaleTime()
-        .domain([d3.min(xYears), d3.max(xYears)])
+        .domain([d3.min(xYears), xMax.setMonth(xMax.getMonth() + 3)]) //Account for end of quarter on scale
         .range([padding, width - padding]);
-
+    // Bars
     svg.selectAll("rect")
         .data(data.data)
         .enter()
@@ -73,7 +71,6 @@ d3.json(
         .attr("width", barwidth - 1)
         .attr("height", (d, i) => height - yScale(d[1]) - padding)
         .attr("fill", "navy")
-        .attr("class", "bar")
         .on("mouseover", (d) => {
             tooltip
                 .style("top", 500 + "px")
@@ -84,7 +81,6 @@ d3.json(
                 .style("opacity", 0.8);
             tooltip.html(setTooltip(d));
         })
-
         .on("mouseout", () =>
             tooltip.transition().duration(100).style("opacity", 0)
         );
@@ -100,7 +96,7 @@ d3.json(
         .attr("transform", "translate(0," + (height - padding) + ")")
         .attr("id", "x-axis")
         .call(xAxis);
-
+    // yAxis label
     svg.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", padding + 25)

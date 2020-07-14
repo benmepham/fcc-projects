@@ -38,6 +38,12 @@
 
     Built with HTML/CSS/JS/React
 
+## Data Visualization
+
+- [Bar Chart](https://bjm.me.uk/fcc-projects/data-visualization/bar-chart/)
+
+    Built with D3
+
 ## Old FCC Projects
 
 - Tribute Page
