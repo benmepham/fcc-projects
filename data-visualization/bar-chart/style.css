@@ -1,0 +1,7 @@
+* {
+    font-family: Arial;
+    text-align: center;
+}
+.bar:hover {
+    opacity: 0.7;
+}
