@@ -15,7 +15,9 @@ const legend = d3
     .style("box-shadow", "2px 2px 5px rgba(0, 0, 0, 0.3)")
     .style("top", 400 + "px")
     .style("left", 1100 + "px")
-    .html("<p style='color:red'>Doping allegation</p><p style='color:blue'>No doping allegation</p>");
+    .html(
+        "<p style='color:red'>Doping allegation</p><p style='color:blue'>No doping allegation</p>"
+    );
 
 const tooltip = d3
     .select("#graph")
@@ -63,7 +65,7 @@ d3.json(
         .attr("cx", (d, i) => xScale(xYears[i]))
         .attr("cy", (d, i) => yScale(yTime[i]))
         .attr("r", 8)
-        .attr("fill", (d) => d.Doping == "" ? "blue" : "red" )
+        .attr("fill", (d) => (d.Doping == "" ? "blue" : "red"))
         .on("mouseover", (d) => {
             tooltip
                 .style("top", event.pageY + 20 + "px")
