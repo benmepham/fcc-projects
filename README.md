@@ -48,7 +48,7 @@
 
     Built with D3
 
-- [x](https://bjm.me.uk/fcc-projects/data-visualization/)
+- [Heat Map](https://bjm.me.uk/fcc-projects/data-visualization/heat-map)
 
     Built with D3
 
