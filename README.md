@@ -44,19 +44,19 @@
 
     Built with D3
 
-- [Scatter Plot](https://bjm.me.uk/fcc-projects/data-visualization/scatter-plot)
+- [Scatter Plot](https://bjm.me.uk/fcc-projects/data-visualization/scatter-plot/)
 
     Built with D3
 
-- [](https://bjm.me.uk/fcc-projects/data-visualization/)
+- [x](https://bjm.me.uk/fcc-projects/data-visualization/)
 
     Built with D3
 
-- [](https://bjm.me.uk/fcc-projects/data-visualization/)
+- [x](https://bjm.me.uk/fcc-projects/data-visualization/)
 
     Built with D3
 
-- [](https://bjm.me.uk/fcc-projects/data-visualization/)
+- [x](https://bjm.me.uk/fcc-projects/data-visualization/)
 
     Built with D3
 
