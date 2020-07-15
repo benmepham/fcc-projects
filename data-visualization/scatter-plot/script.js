@@ -64,7 +64,7 @@ d3.json(
         .attr("data-yvalue", (d, i) => yTime[i])
         .attr("cx", (d, i) => xScale(xYears[i]))
         .attr("cy", (d, i) => yScale(yTime[i]))
-        .attr("r", 8)
+        .attr("r", 5)
         .attr("fill", (d) => (d.Doping == "" ? "blue" : "red"))
         .on("mouseover", (d) => {
             tooltip
