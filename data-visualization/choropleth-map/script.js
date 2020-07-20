@@ -1,26 +1,21 @@
 const width = 960,
     height = 600,
-    padding = 80,
-    paddingTop = 20,
-    paddingBottom = 120;
-
-const tooltip = d3
-    .select("#map")
-    .append("div")
-    .attr("id", "tooltip")
-    .style("width", "200px")
-    .style("opacity", "0")
-    .style("position", "absolute")
-    .style("background-color", "white")
-    .style("border-radius", "4px")
-    .style("padding", "10px")
-    .style("box-shadow", "2px 2px 5px rgba(0, 0, 0, 0.3)");
-
-const svg = d3
-    .select("#map")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    tooltip = d3
+        .select("#map")
+        .append("div")
+        .attr("id", "tooltip")
+        .style("width", "200px")
+        .style("opacity", "0")
+        .style("position", "absolute")
+        .style("background-color", "white")
+        .style("border-radius", "4px")
+        .style("padding", "10px")
+        .style("box-shadow", "2px 2px 5px rgba(0, 0, 0, 0.3)"),
+    svg = d3
+        .select("#map")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
 
 async function run() {
     const educationResponse = await fetch(

@@ -48,15 +48,15 @@
 
     Built with D3
 
-- [Heat Map](https://bjm.me.uk/fcc-projects/data-visualization/heat-map)
+- [Heat Map](https://bjm.me.uk/fcc-projects/data-visualization/heat-map/)
 
     Built with D3
 
-- [Choropleth Map](https://bjm.me.uk/fcc-projects/data-visualization/choropleth-map)
+- [Choropleth Map](https://bjm.me.uk/fcc-projects/data-visualization/choropleth-map/)
 
-    Built with D3
+    Built with D3/TopoJSON
 
-- [x](https://bjm.me.uk/fcc-projects/data-visualization/)
+- [Tree Map](https://bjm.me.uk/fcc-projects/tree-map/)
 
     Built with D3
 
