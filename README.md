@@ -52,7 +52,7 @@
 
     Built with D3
 
-- [x](https://bjm.me.uk/fcc-projects/data-visualization/)
+- [Choropleth Map](https://bjm.me.uk/fcc-projects/data-visualization/choropleth-map)
 
     Built with D3
 
