@@ -56,7 +56,7 @@
 
     Built with D3/TopoJSON
 
-- [Tree Map](https://bjm.me.uk/fcc-projects/tree-map/)
+- [Tree Map](https://bjm.me.uk/fcc-projects/data-visualization/tree-map/)
 
     Built with D3
 
