@@ -1,0 +1,41 @@
+body {
+    font-family: VT323, Monospace;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#box-container div {
+    flex: 1;
+}
+
+h1 {
+    font-size: 50px;
+}
+#subtitle {
+    color: grey;
+}
+
+#img-div {
+    margin: 20px;
+}
+#image {
+    max-width: 50%;
+    display: block;
+    height: auto;
+
+    margin: auto;
+}
+#img-caption {
+    color: grey;
+}
+
+#box-container {
+    display: flex;
+}
+
+#tribute-info {
+    font-size: 20px;
+
+    margin: 20px;
+}

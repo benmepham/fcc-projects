@@ -1,0 +1,13 @@
+body {
+    font-family: VT323, Monospace;
+    background-color: black;
+    color: white;
+}
+
+.item img {
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
